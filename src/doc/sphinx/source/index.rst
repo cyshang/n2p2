@@ -245,8 +245,36 @@ Just switch to the corresponding folder and use ``make shared`` or ``make static
 Examples
 ========
 
-Working minimal examples for each application can be found in the ``examples``
-directory.
+Applications
+------------
+
+Minimal working examples for each application can be found in the corresponding
+subdirectory in ``examples``, e.g. ``examples/nnp-train``.
+
+Training data sets and single configurations (for testing)
+----------------------------------------------------------
+
+Small data sets for testing purposes can be found in
+``examples/configuration-sets`` and single configurations are provided in
+``configuration-single``.
+
+Training data sets (full size)
+------------------------------
+Actual full size data sets may be rather large and are therefore hosted elsewhere:
+
++-------------+--------------+
+| System      | Link         |
++=============+==============+
+| |H2O| [1]_  | |h2o_data|_  |
++-------------+--------------+
+| |Cu2S| [2]_ | |cu2s_data|_ |
++-------------+--------------+
+
+NNP potentials ready for use
+----------------------------
+
+Working pre-trained NNP potentials are located in ``examples/potentials``.
+
 
 Keywords
 ========
@@ -254,6 +282,7 @@ Keywords
 The setup of a neural network potential (network topology, symmetry function
 parameters,...) is stored in a simple text file with keyword-argument pairs. A
 list of keywords is provided :ref:`here <keywords>`.
+
 
 .. toctree::
    :hidden:
@@ -269,6 +298,7 @@ list of keywords is provided :ref:`here <keywords>`.
    Topics/cfg_file
    Topics/if_lammps
    Topics/pair_nnp
+   Topics/training
    Topics/units
 
 .. toctree::
@@ -296,3 +326,22 @@ list of keywords is provided :ref:`here <keywords>`.
    About/authors
    About/license
    About/changelog
+
+.. |H2O| replace:: H\ :sub:`2`\ O
+
+.. |Cu2S| replace:: Cu\ :sub:`2`\ S
+
+.. |h2o_data| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.2634098.svg
+.. _h2o_data: https://doi.org/10.5281/zenodo.2634098
+
+.. |cu2s_data| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.2603918.svg
+.. _cu2s_data: https://doi.org/10.5281/zenodo.2603918
+
+.. [1] Morawietz, T.; Singraber, A.; Dellago, C.; Behler, J. How van Der Waals
+   Interactions Determine the Unique Properties of Water. Proc. Natl. Acad. Sci.
+   U. S. A. 2016, 113 (30), 8368–8373. `https://doi.org/10.1073/pnas.1602375113. <https://doi.org/10.1073/pnas.1602375113>`__
+
+.. [2] Singraber, A.; Morawietz, T.; Behler, J.; Dellago, C. Parallel
+   Multi-Stream Training of High-Dimensional Neural Network Potentials. *Submitted
+   to J. Chem. Theory Comput.* 2019.
+
